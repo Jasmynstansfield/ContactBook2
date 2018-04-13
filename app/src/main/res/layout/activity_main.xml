@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="comjasmynstansfield.httpsgithub.contactbook.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="30dp"
+                android:text="Contact Book"
+                android:textSize="26sp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/tv_contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tv_title"
+                android:layout_margin="16dp"
+                android:text="Name:"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/et_contact_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tv_contact_name"
+                android:layout_toRightOf="@id/tv_contact_name"
+                android:layout_margin="16dp"
+                android:hint="Please enter your contact's name"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tv_phone_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tv_contact_name"
+                android:layout_margin="16dp"
+                android:text="Phone:"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/et_phone_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tv_phone_num"
+                android:layout_toRightOf="@id/tv_phone_num"
+                android:layout_margin="16dp"
+                android:hint="Please enter your contact's phone"
+                android:inputType="phone"
+                android:textAlignment="center"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tv_email_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tv_phone_num"
+                android:layout_margin="16dp"
+                android:text="E-mail:"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/et_email_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tv_email_address"
+                android:layout_toRightOf="@id/tv_email_address"
+                android:layout_margin="16dp"
+                android:hint="Please enter your contact's e-mail"
+                android:inputType="textWebEmailAddress"
+                android:textAlignment="center"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/btn_add_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_email_address"
+                android:text="Add Contact"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:onClick="addContact"
+                android:layout_margin="20dp"/>
+
+            <Button
+                android:id="@+id/btn_sort_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_add_contact"
+                android:text="Sort Contacts"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:onClick="sortContact"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_error_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_sort_contact"
+                android:layout_margin="20dp"
+                android:textAlignment="center"
+                android:textColor="#CC0000"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_sorted_lists"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_sort_contact"
+                android:layout_margin="20dp"
+                android:textAlignment="center"
+                android:textColor="#0000CC"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>
